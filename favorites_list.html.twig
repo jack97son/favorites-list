@@ -1,0 +1,32 @@
+<h4>{{ title }}</h4>
+
+<ul>
+{% for node in items %}
+
+  <li>
+    <p> Titulo: {{ node.title }} </p>
+  </li>
+
+{% endfor %}
+</ul>
+
+
+{#
+/**
+ * @file
+ * Overridden theme implementation for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ *
+ * @ingroup themeable
+ */
+#}
+<button{{ attributes }}>
+  <i class="icon-search"></i>
+  <span class="visually-hidden">Search</span>
+</button>
+{{ children }}

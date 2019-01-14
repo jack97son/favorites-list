@@ -1,0 +1,25 @@
+favorites_list.favourites_page:
+  path: 'favourites'
+  defaults:
+    _controller: '\Drupal\favorites_list\Controller\FavoritesPage::PageController'
+    _title: 'My Favourites Series'
+  requirements:
+    _permission: 'acceso' 
+  options:
+    no_cache: TRUE  
+
+favorite_list.remove_form:
+ path: 'user/favourites/{nid}/remove'
+ defaults:
+   _form: '\Drupal\favorites_list\form\RemoveForm'
+   _title: 'RemoveForm'
+ requirements:
+   _permission: 'acceso'
+
+favorites.autocomplete:
+  path: '/favorites-autocomplete'
+  defaults:
+    _controller: '\Drupal\favorites_list\Controller\FavoritesPage::handleAutocomplete'
+    _format: json
+  requirements:
+    _access: 'TRUE'

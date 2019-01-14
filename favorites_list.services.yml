@@ -1,0 +1,4 @@
+services:
+  favorites_list.say:
+    class: Drupal\favorites_list\Services\MyPlaylistHelper
+    arguments: ['@database', '@current_user']

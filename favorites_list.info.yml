@@ -1,0 +1,5 @@
+name: favorites_list
+description: A favorites_list form to enter user details jack.
+core: 8.x
+package: Custom
+type: module
